@@ -107,12 +107,16 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v//查看note版本</span><br><span class="line">npm -v//查看npm版本</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h1 id="搭建本地博客"><a href="#搭建本地博客" class="headerlink" title="搭建本地博客"></a>搭建本地博客</h1><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ol>
-<li>打开Git Bash，输入下面的命令</li>
-<li>检测是否安装成功</li>
+<li><p>打开Git Bash，输入下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li><p>检测是否安装成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="博客初始化"><a href="#博客初始化" class="headerlink" title="博客初始化"></a>博客初始化</h2><ol>
-<li>新建一个文件夹作为博客的目录，例如将博客目录设置为myblog</li>
-<li>初始化博客</li>
+<li><p>新建一个文件夹作为博客的目录，例如将博客目录设置为myblog</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure></li>
+<li><p>初始化博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myblog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="博客本地效果"><a href="#博客本地效果" class="headerlink" title="博客本地效果"></a>博客本地效果</h2><ol>
 <li><p>Git Bash执行下面的命令</p>
@@ -125,10 +129,14 @@
 <li>新建一个Github仓库，并命名为yourname.github.io。必须按此格式命名，这里yourname可以自定义，比如我的仓库名Linsip.github.io</li>
 </ol>
 <h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><ol>
-<li>Git Bash输入下面的命令，生成密钥</li>
-<li>检测输入的用户名与邮箱是否正确</li>
-<li>输入下面命令创建SSH密钥</li>
-<li>上传SSH密钥到Github</li>
+<li><p>Git Bash输入下面的命令，生成密钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;muzihuaner&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;xxxxxx@qq.com&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>检测输入的用户名与邮箱是否正确</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure></li>
+<li><p>输入下面命令创建SSH密钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;youremail&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>上传SSH密钥到Github</p>
+</li>
 </ol>
 <h2 id="部署代码到Github上"><a href="#部署代码到Github上" class="headerlink" title="部署代码到Github上"></a>部署代码到Github上</h2><ol>
 <li><p>找到并打开配置文件，修改其内容</p>
@@ -140,7 +148,26 @@
 <li><p>打开网址<a target="_blank" rel="noopener" href="http://yourname.github.io/">http://yourname.github.io</a>就可以看到你自己搭建的博客。这里的yourname就是你Github仓库的名字</p>
 </li>
 </ol>
-<h1 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h1><h1 id="Hexo博客常用命令"><a href="#Hexo博客常用命令" class="headerlink" title="Hexo博客常用命令"></a>Hexo博客常用命令</h1><h1 id="Hexo博客常见问题"><a href="#Hexo博客常见问题" class="headerlink" title="Hexo博客常见问题"></a>Hexo博客常见问题</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<h1 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h1><p>暂无</p>
+<h1 id="Hexo博客常用命令"><a href="#Hexo博客常用命令" class="headerlink" title="Hexo博客常用命令"></a>Hexo博客常用命令</h1><h2 id="新建博客目录"><a href="#新建博客目录" class="headerlink" title="新建博客目录"></a>新建博客目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="部署内容到网站"><a href="#部署内容到网站" class="headerlink" title="部署内容到网站"></a>部署内容到网站</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">hexo -g</span><br></pre></td></tr></table></figure>
+
+<h2 id="启用本地预览"><a href="#启用本地预览" class="headerlink" title="启用本地预览"></a>启用本地预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Hexo博客常见问题"><a href="#Hexo博客常见问题" class="headerlink" title="Hexo博客常见问题"></a>Hexo博客常见问题</h1><h2 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2>
       
     </div>
     <footer class="article-footer">
@@ -148,7 +175,7 @@
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B-%E5%8D%9A%E5%AE%A2/" rel="tag">教程,博客</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B%EF%BC%8C%E5%8D%9A%E5%AE%A2/" rel="tag">教程，博客</a></li></ul>
 
     </footer>
   </div>
@@ -171,7 +198,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B-%E5%8D%9A%E5%AE%A2/" rel="tag">教程,博客</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B%EF%BC%8C%E5%8D%9A%E5%AE%A2/" rel="tag">教程，博客</a></li></ul>
     </div>
   </div>
 
@@ -181,7 +208,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%95%99%E7%A8%8B-%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">教程,博客</a>
+      <a href="/tags/%E6%95%99%E7%A8%8B%EF%BC%8C%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">教程，博客</a>
     </div>
   </div>
 
