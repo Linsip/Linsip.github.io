@@ -1,52 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Linsip</title>
-  <link rel="icon" href="favicon.ico"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  
-<link rel="stylesheet" href="/css/ionicons.min.css">
+extends includes/layout.pug
 
-  
-<link rel="stylesheet" href="/css/milligram.min.css">
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
 
-  
-<link rel="stylesheet" href="/css/comfortaa.css">
+    article#article-container.post-content!=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
+        
+    if theme.reward.enable
+      !=partial('includes/post/reward', {}, {cache:theme.fragment_cache})
 
-  
-<link rel="stylesheet" href="/css/source-sans-pro.css">
+    //- ad
+    if theme.ad && theme.ad.post
+      .post-ad!=theme.ad.post
 
-  
-<link rel="stylesheet" href="/css/animate.min.css">
+    include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
 
-  
-<link rel="stylesheet" href="/css/nprogress.css">
-
-  
-<link rel="stylesheet" href="/css/loaders.min.css">
-
-  
-<link rel="stylesheet" href="/css/atom-one-light.css">
-
-  
-<link rel="stylesheet" href="/css/app.css">
-
-<meta name="generator" content="Hexo 5.4.0"></head>
-<body>
-  <div id="app"></div>
-  <script type="text/javascript">
-    window.root = "/"
-  </script>
-  
-<script src="/js/manifest.js"></script>
-
-  
-<script src="/js/vendor.js"></script>
-
-  
-<script src="/js/app.js"></script>
-
-</body>
-</html>
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache:theme.fragment_cache})
+      
