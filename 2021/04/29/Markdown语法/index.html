@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      74 字
+      308 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      4
        分钟
     </span>
   
@@ -249,29 +249,33 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年5月1日 凌晨
+                  本文最后更新于：2021年5月2日 下午
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h2 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h2><p>#空格+标题名称</p>
+              <h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><p>Markdown是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。 它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。 如GitHub、Reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge、简书等，甚至还能被使用来撰写电子书。</p>
+<h2 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h2><p>#空格+标题名称：一级标题</p>
+<p>##空格+标题名称：二级标题</p>
+<p>…</p>
 <h2 id="字体："><a href="#字体：" class="headerlink" title="字体："></a>字体：</h2><p><strong>粗体</strong>    在字的两边加**</p>
 <p><em>斜体</em>    在字的两边加*</p>
-<p><del>删除线</del></p>
+<p><del>删除线</del>    在字左右加~~</p>
 <h2 id="引用："><a href="#引用：" class="headerlink" title="引用："></a>引用：</h2><blockquote>
 <p>大于号+空格就是引用</p>
 </blockquote>
 <h2 id="分割线："><a href="#分割线：" class="headerlink" title="分割线："></a>分割线：</h2><hr>
 <p>三条杠或三个*</p>
+<hr>
 <h2 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h2><p><img src="" srcset="/img/loading.gif" lazyload alt="图片名"></p>
 <h2 id="超链接："><a href="#超链接：" class="headerlink" title="超链接："></a>超链接：</h2><p><a href="www.bilibili.com">B站</a></p>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ol>
 <li>1点空格</li>
-<li>。。。。。。</li>
+<li></li>
 </ol>
 <ul>
 <li>减号空格</li>
-<li>。。。。。。</li>
+<li></li>
 </ul>
 <h2 id="表格："><a href="#表格：" class="headerlink" title="表格："></a>表格：</h2><table>
 <thead>
@@ -297,7 +301,17 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span><br></code></pre></td></tr></table></figure>
+<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span></span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span> <span class="hljs-params">(String[] args)</span> </span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;Hello World&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="代办事项"><a href="#代办事项" class="headerlink" title="代办事项"></a>代办事项</h2><ul>
+<li><input disabled="" type="checkbox"> 事项1</li>
+<li><input checked="" disabled="" type="checkbox"> 事项2</li>
+</ul>
+<h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>$$y=2x^2+1$$</p>
+<p>$$E=mc^2$$</p>
+<p>$\sum_{i=1}^n a_i=0$</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><code>ctrl +e</code></p>
+
             </div>
             <hr>
             <div>
@@ -538,6 +552,13 @@
 
 
 
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
 
 
 

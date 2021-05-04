@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      12.4k 字
+      13.3k 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      200
+      214
        分钟
     </span>
   
@@ -249,7 +249,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年5月1日 下午
+                  本文最后更新于：2021年5月3日 下午
                 
               </p>
             
@@ -877,7 +877,16 @@
 <p><strong>goto关键字</strong>很早就在程序设计语言中出现。尽管goto仍是Java的一个保留字，但并未在语言中得到正式的使用；Java没有goto。然而在break和continue这两个关键字上，可以看到goto的影子————带标签的break和continue</p>
 <p>标签是指后面跟一个冒号的标识符例如：label</p>
 <p>对于Java来说，唯一用到标签的地方是在循环语句之前。在循环语句之前设置标签的唯一理由是：我们希望在其中嵌套另一个循环，因为break和continue关键字只会终止当前循环，但是如果和标签一起使用，他们就会中断到存在标签的地方</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="什么是方法"><a href="#什么是方法" class="headerlink" title="什么是方法"></a>什么是方法</h3><h3 id="方法定义"><a href="#方法定义" class="headerlink" title="方法定义"></a>方法定义</h3><p><strong>定义</strong></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="什么是方法"><a href="#什么是方法" class="headerlink" title="什么是方法"></a>什么是方法</h3><p>方法是语句的集合，他们在一起执行一个功能</p>
+<ul>
+<li>方法是解决一类问题的步骤的有序组合</li>
+<li>方法包含于类或者对象中</li>
+<li>方法在程序中被创建，在其他地方被引用</li>
+</ul>
+<p>一个方法尽量只完成一个功能，利于后期拓展</p>
+<p>回顾方法的命名规则</p>
+<p>首字母小写+驼峰命名</p>
+<h3 id="方法定义"><a href="#方法定义" class="headerlink" title="方法定义"></a>方法定义</h3><p><strong>定义</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">修饰符 返回值类型 方法名(参数列表)&#123;<br>    方法体<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>例如main()方法</p>
@@ -905,7 +914,17 @@
 
 
 
-<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><p>重载就是在一个类中，有<strong>相同的函数名称</strong>，但是<strong>形参不同</strong>的函数。</p>
+<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><p>调用方法：对象名.方法名(实参列表)</p>
+<p>Java支持两种调用方法的方式</p>
+<p>方法返回的是一个值的时候，方法的调用通常被当作一个值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span> max = max(<span class="hljs-number">20</span>,<span class="hljs-number">10</span>);<br></code></pre></td></tr></table></figure>
+
+<p>方法返回值是void，方法的调用是一条语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.print(<span class="hljs-string">&quot;Hello world&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><p>重载就是在一个类中，有<strong>相同的函数名称</strong>，但是<strong>形参不同</strong>的函数。</p>
 <p>方法的重载必须满足下列规则：</p>
 <p>​    方法名称必须<strong>相同</strong></p>
 <p>​    参数列表必须<strong>不同</strong></p>
@@ -986,9 +1005,14 @@
 <p>数组长度不可变 0~array.length-1，越界则会报错：ArrayIndexOutOfBoundsException即数组下标越界异常</p>
 <p>最早遇到的错误</p>
 <p><strong>ArrayIndexOutOfBoundsException</strong>：数组下标越界异常</p>
-<h3 id="数组的使用"><a href="#数组的使用" class="headerlink" title="数组的使用"></a>数组的使用</h3><p>for each循环</p>
-<p>数组作为方法入参</p>
-<p>数组作为返回值</p>
+<h3 id="数组的使用"><a href="#数组的使用" class="headerlink" title="数组的使用"></a>数组的使用</h3><p>基本用法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> array;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">数组的基本用法</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo03</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span>[] arrays = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;;<br>        <span class="hljs-comment">//遍历数组元素</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;arrays.length; i++) &#123;<br>            System.out.println(arrays[i]);<br>        &#125;<br>        <span class="hljs-comment">//计算所有数组元素的和</span><br>        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;arrays.length;i++) &#123;<br>            sum += arrays[i];<br>        &#125;<br>        System.out.println(sum);<span class="hljs-comment">//打印数组的和</span><br>        <span class="hljs-comment">//查找最大数组元素</span><br>        <span class="hljs-keyword">int</span> max = arrays[<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;arrays.length; i++) &#123;<br>            <span class="hljs-keyword">if</span>(arrays[i]&gt;max)&#123;<br>                max = arrays[i];<br>            &#125;<br>        &#125;<br>        System.out.println(<span class="hljs-string">&quot;数组最大元素为：&quot;</span>+max);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>进阶用法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> array;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">数组的进阶用法</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo04</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span>[] arrays = &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>&#125;;<br>        <span class="hljs-comment">//增强型的for each循环，通常只用于遍历数组 JDK1.5以上 缺点：取不到数组的下标</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> array : arrays) &#123;<br>            System.out.println(array);<br>        &#125;<br>        ArrayDemo04.printArray(arrays);<br>        <span class="hljs-keyword">int</span>[] reverse = revArrays(arrays);<br>        printArray(reverse);<br>    &#125;<br><br>    <span class="hljs-comment">//打印数组元素(数组作为方法入参)</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arrays)</span></span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;arrays.length; i++) &#123;<br>            System.out.print(arrays[i]+<span class="hljs-string">&quot; &quot;</span>);<br>        &#125;<br>    &#125;<br>    <span class="hljs-comment">//反转数组(数组作为返回值)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] revArrays(<span class="hljs-keyword">int</span>[] arrays)&#123;<br>        <span class="hljs-keyword">int</span>[] result = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[arrays.length];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>,j = arrays.length-<span class="hljs-number">1</span>; i &lt; arrays.length; i++,j--) &#123;<br>            result[i]=arrays[j];<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
 <h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>二维数组：数组中嵌套数组，可以看为2行3列的数组</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span>[][] arrays = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>][<span class="hljs-number">3</span>];<br></code></pre></td></tr></table></figure>
 
@@ -1110,9 +1134,24 @@
 </ol>
 </li>
 </ol>
-<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><h3 id="new对象"><a href="#new对象" class="headerlink" title="new对象"></a>new对象</h3><p>创建与初始化对象</p>
-<p>使用new关键字创建对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><br></code></pre></td></tr></table></figure>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>构造器也称为构造方法，是在创建对象的时候必须要调用的。并且构造器有以下两个特点</p>
+<ul>
+<li>必须和类名相同</li>
+<li>必须没有返回值类型，也不能写void</li>
+</ul>
+<p><strong>无参构造</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">()</span></span>&#123;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注：</p>
+<p>一个类即使什么都不写也存在一个无参构造，也叫默认构造器</p>
+<p><strong>有参构造</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>&#123;<br>    <span class="hljs-keyword">int</span> age;<br>    String name;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age,String name)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>        <span class="hljs-keyword">this</span>.age = age;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注：</p>
+<p>一个类如果写了有参构造，无参构造就不默认存在了，要使用无参构造必须显式的定义出来</p>
+<h3 id="new对象"><a href="#new对象" class="headerlink" title="new对象"></a>new对象</h3><p>创建与初始化对象</p>
+<p>在main()方法中使用new关键字创建对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Person person = <span class="hljs-keyword">new</span> Person();<br></code></pre></td></tr></table></figure>
 
 
 
@@ -1259,49 +1298,37 @@
 <li>必须要重写接口中的方法</li>
 </ol>
 <h3 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h3><p>内部类就是在一个类的内部再定义一个类，比如，A类中定义一个B类，那么B类相对于A类来说就是一个内部类，或者说A类相对于B类是外部类</p>
-<ol>
-<li><p>成员内部类</p>
-<ol>
-<li><p>```java<br>package oop.demo10;</p>
-<p>public class Outer {</p>
-<pre><code>private int id = 100;
-public void out()&#123;
-    System.out.println(&quot;这是外部方法&quot;);
-&#125;
-
-public class Inner&#123;
-    public void in()&#123;
-        System.out.println(&quot;这是内部方法&quot;);
-    &#125;
-    public void getId()&#123;
-        System.out.println(id);
-    &#125;
-&#125;
-</code></pre>
-<p>}</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><br>   <span class="hljs-number">2.</span> <br><br><span class="hljs-number">2.</span> 静态内部类<br><br>   <span class="hljs-number">1.</span> <span class="hljs-keyword">static</span><br><br>   <span class="hljs-number">2.</span> ```java<br>      package oop.demo10;<br>      <br>      <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Outer</span> &#123;</span><br>          <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id = <span class="hljs-number">100</span>;<br>          <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">out</span><span class="hljs-params">()</span></span>&#123;<br>              System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;这是外部方法&quot;</span>);<br>          &#125;<br>      <br>          <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inner</span>&#123;</span><br>              <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">in</span><span class="hljs-params">()</span></span>&#123;<br>                  System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;这是内部方法&quot;</span>);<br>              &#125;<br>              <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span></span>&#123;<br>                  System.out.<span class="hljs-built_in">println</span>(id);<br>              &#125;<br>          &#125;<br>      &#125;<br>      <br></code></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-</li>
-<li><p>局部内部类</p>
-<ol>
-<li>```java<br>package oop.demo10;public class Outer {<br>//局部内部类<pre><code>public void out()&#123;
-
-    class Inner&#123;
-
-        public void in()&#123;
-
-        &#125;
-    &#125;
+<p>成员内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> oop.demo10;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Outer</span> </span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id = <span class="hljs-number">100</span>;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">out</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;这是外部方法&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inner</span></span>&#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">in</span><span class="hljs-params">()</span></span>&#123;<br>            System.out.println(<span class="hljs-string">&quot;这是内部方法&quot;</span>);<br>        &#125;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span></span>&#123;<br>            System.out.println(id);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
-&#125;
-</code></pre>
-}<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><br>   <span class="hljs-number">2.</span> <br><br><span class="hljs-number">4.</span> 匿名内部类<br><br>   ```java<br>   <span class="hljs-keyword">package</span> oop.demo10;<br>   <br>   <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>       <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>   <span class="hljs-comment">//有名字初始化类</span><br>           Apple apple = <span class="hljs-keyword">new</span> Apple();<br>           apple.eat();<br>   <span class="hljs-comment">//没有名字初始化类</span><br>           <span class="hljs-keyword">new</span> Apple().eat();<br>       &#125;<br>   &#125;<br>   <br>   <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Apple</span> </span>&#123;<br>       <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>&#123;<br>           System.out.println(<span class="hljs-string">&quot;1&quot;</span>);<br>       &#125;<br>   &#125;<br></code></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ol>
-<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h3 id="Throwable"><a href="#Throwable" class="headerlink" title="Throwable"></a>Throwable</h3><h3 id="五个关键字"><a href="#五个关键字" class="headerlink" title="五个关键字"></a>五个关键字</h3><h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p>使用java内置的异常类可以描述在编程时出现的大部分异常情况。除了这些异常，我们可以自定义异常</p>
+
+<p>静态内部类</p>
+<p>static</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> oop.demo10;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Outer</span> </span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id = <span class="hljs-number">100</span>;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">out</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;这是外部方法&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inner</span></span>&#123;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">in</span><span class="hljs-params">()</span></span>&#123;<br>            System.out.println(<span class="hljs-string">&quot;这是内部方法&quot;</span>);<br>        &#125;<br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span></span>&#123;<br>            System.out.println(id);<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p>局部内部类</p>
+<p>类的内部再定义一个类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> oop.demo10;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Outer</span> </span>&#123;<br><span class="hljs-comment">//局部内部类</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">out</span><span class="hljs-params">()</span></span>&#123;<br><br>        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inner</span></span>&#123;<br><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">in</span><span class="hljs-params">()</span></span>&#123;<br><br>            &#125;<br>        &#125;<br><br><br>    &#125;<br><br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p>匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> oop.demo10;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><span class="hljs-comment">//有名字初始化类</span><br>        Apple apple = <span class="hljs-keyword">new</span> Apple();<br>        apple.eat();<br><span class="hljs-comment">//没有名字初始化类</span><br>        <span class="hljs-keyword">new</span> Apple().eat();<br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Apple</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;1&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>异常：阻止当前方法的或作用域继续执行的问题</p>
+<p>异常的简单分类</p>
+<p><strong>检查性异常</strong></p>
+<p>最具代表性的检查性异常是用户错误或问题引起的异常，这是程序员无法预见的。例如要打开一个不存在的文件时，一个异常就发生了，这些异常在编译时不能被简单地忽略。</p>
+<p><strong>运行时异常</strong></p>
+<p>运行时异常是可能被程序员避免的异常。与检查性异常相反，运行时异常可以在编译时被忽略。常见运行时异常有：空指针异常(NullPointerException)、下标越界异常(IndexOutOfBoundsException)、算术异常(ArithmaticException)、类型转换异常(ClassCastException) 等</p>
+<p><strong>错误ERROR</strong></p>
+<p>错误不是异常，而是脱离程序员控制的问题。错误在代码中通常被忽略。例如，当栈溢出时，一个错误就发生了，他们在编译时也检查不到。</p>
+<h3 id="Throwable"><a href="#Throwable" class="headerlink" title="Throwable"></a>Throwable</h3><h3 id="五个关键字"><a href="#五个关键字" class="headerlink" title="五个关键字"></a>五个关键字</h3><h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p>使用java内置的异常类可以描述在编程时出现的大部分异常情况。除了这些异常，我们可以自定义异常</p>
 <p>如何自定义异常</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> exception.demo02;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">自定义异常</span><br><span class="hljs-comment">1.创建自定义异常类</span><br><span class="hljs-comment">2.在方法中通过Throw关键字抛出异常对象</span><br><span class="hljs-comment">3.如果要在当前抛出异常的方法中处理异常，可以用try-catch语句捕获异常，并处理异常；否则就在方法的声明出通过throws关键字</span><br><span class="hljs-comment">指明要抛出给方法调用者的异常</span><br><span class="hljs-comment">4.在出现异常的方法的调用者中处理和捕获异常</span><br><span class="hljs-comment"> */</span><br><br><br><span class="hljs-comment">//1.创建自定义异常类,继承Exception类</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span> </span>&#123;<br>    <span class="hljs-comment">//传递数字，&gt;10就抛出异常</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> detail;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyException</span><span class="hljs-params">( <span class="hljs-keyword">int</span> a)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.detail = a;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<span class="hljs-comment">//异常的打印信息</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;MyException&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;detail=&quot;</span> + detail +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
@@ -1594,6 +1621,13 @@ public class Inner&#123;
 
 
 
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
 
 
 
