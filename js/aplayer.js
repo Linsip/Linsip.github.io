@@ -9,7 +9,7 @@
       autoplay: false,
       loop: 'all',
       order: 'random',
-      theme: '#b7daff',	  
+      //theme: '#b7daff',	  
       preload: 'auto',
 	  listFolded: true,
 	  listMaxHeight: 90,
