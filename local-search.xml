@@ -4,12 +4,56 @@
   
   
   <entry>
+    <title>1</title>
+    <link href="/2021/05/11/1/"/>
+    <url>/2021/05/11/1/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Gitee+PicGo免费私人图床搭建教程</title>
+    <link href="/2021/05/11/Gitee-PicGo%E5%85%8D%E8%B4%B9%E7%A7%81%E4%BA%BA%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
+    <url>/2021/05/11/Gitee-PicGo%E5%85%8D%E8%B4%B9%E7%A7%81%E4%BA%BA%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<p>在写博客的时候经常遇到需要传图</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>图床</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>OOP原则</title>
     <link href="/2021/05/11/OOP%E5%8E%9F%E5%88%99/"/>
     <url>/2021/05/11/OOP%E5%8E%9F%E5%88%99/</url>
     
     <content type="html"><![CDATA[<h1 id="OOP原则"><a href="#OOP原则" class="headerlink" title="OOP原则"></a>OOP原则</h1><h2 id="OOP概述"><a href="#OOP概述" class="headerlink" title="OOP概述"></a>OOP概述</h2><blockquote><p>面向对象程序设计(Object Oriented Programming)作为一种新方法，其本质是以建立模型体现出来的抽象思维过程和面向对象的方法。模型是用来反映现实世界中事物特征的。任何一个模型都不可能反映客观事物的一切具体特征，只能对事物特征和变化规律的一种抽象，且在它所涉及的范围内更普遍、更集中、更深刻地描述客体的特征。通过建立模型而达到的抽象是人们对客体认识的深化。</p></blockquote><p>什么是优秀的代码？</p><ul><li>代码可读性高</li><li>逻辑清晰</li><li>高内聚，低耦合</li><li>···</li></ul><p>OOP三大特性</p><ul><li>封装</li><li>继承</li><li>多态</li></ul><h2 id="OOP五大设计原则"><a href="#OOP五大设计原则" class="headerlink" title="OOP五大设计原则"></a>OOP五大设计原则</h2><p>单一职责原则</p><p>开闭原则</p><p>里氏替换原则</p><p>接口隔离原则</p><p>依赖倒置原则</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>高内聚，低耦合</strong></p>]]></content>
     
+    
+    <categories>
+      
+      <category>笔记</category>
+      
+    </categories>
     
     
     <tags>
