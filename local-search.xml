@@ -4,11 +4,24 @@
   
   
   <entry>
+    <title>GUI编程之贪吃蛇</title>
+    <link href="/2021/05/12/GUI%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%B4%AA%E5%90%83%E8%9B%87/"/>
+    <url>/2021/05/12/GUI%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%B4%AA%E5%90%83%E8%9B%87/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Gitee+PicGo免费私人图床搭建教程</title>
     <link href="/2021/05/11/Gitee-PicGo%E5%85%8D%E8%B4%B9%E7%A7%81%E4%BA%BA%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
     <url>/2021/05/11/Gitee-PicGo%E5%85%8D%E8%B4%B9%E7%A7%81%E4%BA%BA%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
     
-    <content type="html"><![CDATA[<p>在写博客的时候经常遇到需要传图</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Gitee-PicGo免费私人图床搭建教程"><a href="#Gitee-PicGo免费私人图床搭建教程" class="headerlink" title="Gitee+PicGo免费私人图床搭建教程"></a>Gitee+PicGo免费私人图床搭建教程</h1><p>我们在写Markdown博客的时候，上传到网上后，图片仍然保存在本地并不会上传。</p><p>解决方法</p><ul><li>自己搭建免费图床</li><li><del>用收费图床</del></li></ul><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ol><li><p>注册Gitee账号</p><ol><li><p><a href="https://gitee.com/">Gitee官网</a></p></li><li><p>新建仓库<img src="https://gitee.com/Linsip/blog/raw/master/img/20210512023922.png" alt="image-20210512023801125"></p></li><li><p>生成私人令牌</p><p>打开账号设置，私人令牌，生成令牌</p><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512024238.png" alt="私人令牌"></p><p>勾选下面几项，描述自己随便写，然后提交</p><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512024547.png" alt="私人令牌"></p><p><strong>保存好你的私人令牌</strong></p><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512024910.png" alt="私人令牌生成"></p></li></ol></li><li><p>下载安装PicGo</p><ol><li><p><a href="https://molunerfinn.com/PicGo/">PicGo下载</a></p></li><li><p>自行安装</p><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512021839.png" alt="PicGo"></p></li></ol></li><li><p>Node.js</p><ol><li><p><a href="https://nodejs.org/en/download/package-manager/">Node.js</a></p></li><li><p>检验是否安装成功</p><p>命令行输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">node --version<br></code></pre></td></tr></table></figure><p>如果看到版本号就安装成功</p></li></ol></li></ol><h2 id="PicGo配置"><a href="#PicGo配置" class="headerlink" title="PicGo配置"></a>PicGo配置</h2><p>PicGo下载安装一个gitee-uploader插件</p><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512015945.png" alt="安装gitee-uploader插件"></p><p>打开图床设置，填入右边方框内容</p><p>其中：</p><table><thead><tr><th align="center"></th><th align="center"></th></tr></thead><tbody><tr><td align="center">repo</td><td align="center">比如你的 gitee 账号为 user，存储图片的仓库为 images，则此处填入 <strong>user/images</strong></td></tr><tr><td align="center">branch</td><td align="center">分支</td></tr><tr><td align="center">token</td><td align="center">私人令牌</td></tr><tr><td align="center">path</td><td align="center">路径</td></tr></tbody></table><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512020239.png" alt="图床设置"></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="Typera"><a href="#Typera" class="headerlink" title="Typera"></a>Typera</h3><ol><li>打开Typera，按<code>ctrl</code>+<code>.</code>进入偏好设置，点击图像</li><li>对插入图片做以下设置</li><li>上传服务选择PicGo，路径选择自己安装的PicGo路径</li></ol><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512014039.png" alt="typera"></p><p>点击<strong>验证图片上传选项</strong>，弹出如下内容表示配置成功</p><p><img src="https://gitee.com/Linsip/blog/raw/master/img/20210512014619.png" alt="图片验证选项"></p><p>在Typera插入图片时就会自动上传，而不用保存在本地</p>]]></content>
     
     
     <categories>
