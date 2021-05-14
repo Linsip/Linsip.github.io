@@ -14,7 +14,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="I/O输入/输出(Input/Output)，分为IO设备和IO接口两个部分。 在POSIX兼容的系统上，例如Linux系统 [1]  ，I/O操作可以有多种方式，比如DIO(Direct I/O)，AIO(Asynchronous I/O，异步I/O)，Memory-Mapped I/O(内存映射I/O)等，不同的I/O方式有不同的实现方式和性能，在不同的应用中可以按情况选择不同的I/O方式。">
   <meta name="author" content="Linsip">
   <meta name="keywords" content="">
   
@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      0 字
+      978 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      14
        分钟
     </span>
   
@@ -249,12 +249,63 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年5月13日 晚上
+                  本文最后更新于：2021年5月14日 下午
                 
               </p>
             
             <div class="markdown-body">
-              
+              <h1 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h1><h2 id="什么是IO"><a href="#什么是IO" class="headerlink" title="什么是IO"></a>什么是IO</h2><blockquote>
+<p>I/O输入/输出(Input/Output)，分为IO设备和IO接口两个部分。 在POSIX兼容的系统上，例如Linux系统 [1]  ，I/O操作可以有多种方式，比如DIO(Direct I/O)，AIO(Asynchronous I/O，异步I/O)，Memory-Mapped I/O(内存映射I/O)等，不同的I/O方式有不同的实现方式和性能，在不同的应用中可以按情况选择不同的I/O方式。</p>
+<p>百度百科</p>
+</blockquote>
+<p>我们把数据的传输看为数据的流动，按照流动的方向，以内存为基准，分为输入<code>input</code>和输出<code>output</code>。<strong>即流向内存是输入流，流出内存是输出流。</strong></p>
+<p><strong>IO的分类</strong></p>
+<p>根据数据的流向分为</p>
+<ul>
+<li>输入流：把数据从其他设备读取到内存中</li>
+<li>输出流：把数据从内存中写入到其他设备</li>
+</ul>
+<p>根据数据类型分为</p>
+<ul>
+<li>字节流：以字节为单位，读写数据的流</li>
+<li>字符流：以字符为单位，读写数据的流</li>
+</ul>
+<p><strong>顶级父类们</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">输入流</th>
+<th align="center">输出流</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">字节流</td>
+<td align="center">字节输入流InputStream</td>
+<td align="center">字节输出流OutputStream</td>
+</tr>
+<tr>
+<td align="center">字符流</td>
+<td align="center">字符输入流Reader</td>
+<td align="center">字符输出流Writer</td>
+</tr>
+</tbody></table>
+<h2 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h2><p><strong>一切皆为字节</strong></p>
+<p>一切数据都是以二进制数字的形式保存的，都是一个个的字节。<strong>字节流可以传输任何数据</strong></p>
+<p><strong>字节输出流</strong></p>
+<p><strong>写出字节数据</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> io;<br><br><span class="hljs-keyword">import</span> java.io.FileOutputStream;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><br><span class="hljs-comment">/*</span><br><span class="hljs-comment">java.io.OutputStream 字节输出流</span><br><span class="hljs-comment">此抽象类是表示输出字节流的所有类的超类。输出流接受输出字节并将这些字节发送到某个接收器。</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">成员方法</span><br><span class="hljs-comment">     void	close() 关闭此输出流并释放与此流有关的所有系统资源。</span><br><span class="hljs-comment">     void	flush() 刷新此输出流并强制写出所有缓冲的输出字节。</span><br><span class="hljs-comment">     void	write(byte[] b) 将 b.length个字节从指定的 byte 数组写入此输出流。</span><br><span class="hljs-comment">     void	write(byte[] b, int off, int len)   将指定 byte 数组中从偏移量 off 开始的 len 个字节写入此输出流。</span><br><span class="hljs-comment">     abstract  void	write(int b)    将指定的字节写入此输出流。</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">java.io.FileOutputStream extends OutputStream</span><br><span class="hljs-comment">    FileOutputStream 文件输出流</span><br><span class="hljs-comment">    构造方法</span><br><span class="hljs-comment">        FileOutputStream(String name)   创建一个向具有指定名称的文件中写入数据的输出文件流。</span><br><span class="hljs-comment">        FileOutputStream(File file)     创建一个向指定 File 对象表示的文件中写入数据的文件输出流。</span><br><span class="hljs-comment">        ...</span><br><span class="hljs-comment">    构造方法的作用：</span><br><span class="hljs-comment">        创建一个FileOutputStream对象</span><br><span class="hljs-comment">        根据构造方法中传递的文件路径、文件名，创造一个空的文件</span><br><span class="hljs-comment">        把FileOutputStream对象指向该文件</span><br><span class="hljs-comment">    写入数据的原理：</span><br><span class="hljs-comment">        Java程序--&gt;JVM--&gt;OS--&gt;OS中的写入数据方法--&gt;将数据写入文件</span><br><span class="hljs-comment">    字节输出流的使用</span><br><span class="hljs-comment">        1.创建一个FileOutputStream对象，构造方法中传入写入数据的目的地</span><br><span class="hljs-comment">        2.调用FileOutputStream对象中的write方法，把数据写入到文件</span><br><span class="hljs-comment">        3.释放资源（凡是涉及到IO流的使用的都会占用一定的内存资源，使用完毕一定要记得关闭，节省系统资源，提升程序效率）</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IODemo01</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br>        <span class="hljs-comment">//1.创建一个FileOutputStream对象，构造方法中传入写入数据的目的地</span><br>        FileOutputStream fos = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">&quot;C:\\Users\\MaLin\\Desktop\\JavaCode\\src\\io\\a.txt&quot;</span>);<br>        <span class="hljs-comment">//2.调用FileOutputStream对象中的write方法，把数据写入到文件</span><br>        fos.write(<span class="hljs-number">97</span>);<br>        <span class="hljs-comment">//3.释放资源（凡是涉及到IO流的使用的都会占用一定的内存资源，使用完毕一定要记得关闭，节省系统资源，提升程序效率）</span><br>        fos.close();<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>文件存储原理</strong></p>
+<p>文本编辑器读取文件原理</p>
+<p>在任意文本编辑器中，打开文件都会查询编码表、</p>
+<p>0-127 查询ASCII码表</p>
+<p>​    97–a</p>
+<p>​    ···</p>
+<p>其他 查询当前系统默认码表，中文系统GBK码表</p>
+
             </div>
             <hr>
             <div>
