@@ -203,7 +203,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      576 字
+      743 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      11
        分钟
     </span>
   
@@ -255,7 +255,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：12 天前
+                  本文最后更新于：7 分钟前
                 
               </p>
             
@@ -318,7 +318,7 @@
 <li><p>打开网址<a target="_blank" rel="noopener" href="http://yourname.github.io/">http://yourname.github.io</a>就可以看到你自己搭建的博客。这里的yourname就是你Github仓库的名字</p>
 </li>
 </ol>
-<h2 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h2><h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h3><p>待完善</p>
+<h2 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h2><h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h3><p>推荐<a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a></p>
 <h2 id="Hexo博客常用命令"><a href="#Hexo博客常用命令" class="headerlink" title="Hexo博客常用命令"></a>Hexo博客常用命令</h2><h3 id="新建博客目录"><a href="#新建博客目录" class="headerlink" title="新建博客目录"></a>新建博客目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init &lt;folder&gt;<br></code></pre></td></tr></table></figure>
 
 <h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new [layout] &lt;title&gt;<br>//例如<br>hexo n <span class="hljs-string">&quot;我的第一篇博客&quot;</span><br></code></pre></td></tr></table></figure>
@@ -331,17 +331,34 @@
 
 
 
-<h2 id="Hexo博客常见问题"><a href="#Hexo博客常见问题" class="headerlink" title="Hexo博客常见问题"></a>Hexo博客常见问题</h2><h3 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h3><p>到<a target="_blank" rel="noopener" href="https://hexo.io/themes">Hexo官网</a>找到自己喜欢的主题，</p>
-<p>让后输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br></code></pre></td></tr></table></figure>
+<h2 id="Hexo博客常见问题"><a href="#Hexo博客常见问题" class="headerlink" title="Hexo博客常见问题"></a>Hexo博客常见问题</h2><h3 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h3><ol>
+<li><p>到<a target="_blank" rel="noopener" href="https://hexo.io/themes">Hexo官网</a>找到自己喜欢的主题，</p>
+</li>
+<li><p>然后再博客目录下面的themes文件夹下打开git bash，输入以下命令，完成后themes文件夹下会多出一个文件夹，这个文件夹名字就是主题的名字</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> 主题的网址<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>修改<strong>博客配置文件</strong>即博客目录下_config.yml文件，找到themes，修改后面的主题的名字</li>
+</ol>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">themes:</span> 主题名字<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>修改<strong>主题配置</strong>文件（不是博客配置文件，一般在主题文件夹themes里面主题文件夹下的_config.yml文件），然后回到博客目录下，打开git bash，查看效果</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>部署到远端，博客目录下，打开git bash</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure>
 
 
 
 
 
 
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
             </div>
             <hr>
             <div>
@@ -479,7 +496,7 @@
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
-     <a href="https://linsip.cn/" target="_blank" rel="nofollow noopener"><span>Linsip</span></a> <i class="iconfont icon-love"></i> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=719004051&site=qq&menu=yes">QQ</a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>本站所用主题为fluid</span></a> <i class="iconfont icon-love"></i> <a href="https://linsip.cn/" target="_blank" rel="nofollow noopener"><span>由Github&Vercel托管</span></a> <div> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
   </div>
   
   <div class="statistics">
