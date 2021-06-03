@@ -14,17 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Hexo博客搭建教程Hexo官方文档
-搭建环境下载安装Git
-到Git官网下载合适版本的Git，并安装
-
-检测安装是否成功
-1git --version//查看Git版本
-">
+  <meta name="description" content="">
   <meta name="author" content="Linsip">
   <meta name="keywords" content="">
   
-  <title>Hexo博客的搭建部署 - Linsip</title>
+  <title>MOOC翁恺面向程序设计——Java语言第一周编程题 - Linsip</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -181,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hexo博客的搭建部署">
+            <span class="h2" id="subtitle" title="MOOC翁恺面向程序设计——Java语言第一周编程题">
               
             </span>
 
@@ -191,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-04-20 00:21" pubdate>
-        2021年4月20日 凌晨
+      <time datetime="2021-06-03 20:30" pubdate>
+        2021年6月3日 晚上
       </time>
     </span>
   
@@ -203,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      743 字
+      721 字
     </span>
   
 
@@ -213,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      12
        分钟
     </span>
   
@@ -251,112 +245,56 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hexo博客的搭建部署</h1>
+            <h1 style="display: none">MOOC翁恺面向程序设计——Java语言第一周编程题</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：3 天前
+                  本文最后更新于：几秒前
                 
               </p>
             
             <div class="markdown-body">
-              <h1 id="Hexo博客搭建教程"><a href="#Hexo博客搭建教程" class="headerlink" title="Hexo博客搭建教程"></a>Hexo博客搭建教程</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo官方文档</a></p>
-<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><h3 id="下载安装Git"><a href="#下载安装Git" class="headerlink" title="下载安装Git"></a>下载安装Git</h3><ol>
-<li><p>到<a target="_blank" rel="noopener" href="https://gitforwindows.org/">Git官网</a>下载合适版本的Git，并安装</p>
-</li>
-<li><p>检测安装是否成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git --version//查看Git版本<br></code></pre></td></tr></table></figure></li>
-</ol>
-<span id="more"></span>
-
-<p>Git安装成功后可以用Git Bash来进行命令行操作</p>
-<h3 id="下载安装Note-js"><a href="#下载安装Note-js" class="headerlink" title="下载安装Note.js"></a>下载安装Note.js</h3><ol>
-<li><p>到<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">Note.js中文官网</a>下载合适的版本，并安装</p>
-</li>
-<li><p>检测是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">node -v//查看note版本<br>npm -v//查看npm版本<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="搭建本地博客"><a href="#搭建本地博客" class="headerlink" title="搭建本地博客"></a>搭建本地博客</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ol>
-<li><p>打开Git Bash，输入下面的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure></li>
-<li><p>检测是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo -v<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="博客初始化"><a href="#博客初始化" class="headerlink" title="博客初始化"></a>博客初始化</h3><ol>
-<li><p>新建一个文件夹作为博客的目录，例如将博客目录设置为myblog</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init myblog<br></code></pre></td></tr></table></figure></li>
-<li><p>初始化博客</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> myblog<br>npm install<br></code></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="博客本地效果"><a href="#博客本地效果" class="headerlink" title="博客本地效果"></a>博客本地效果</h3><ol>
-<li><p>Git Bash执行下面的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo -g//生成静态页面<br>hexo server//本地预览<br></code></pre></td></tr></table></figure></li>
-<li><p>查看<a target="_blank" rel="noopener" href="http://localhost:4000/">本地博客</a>效果</p>
-</li>
-</ol>
-<h2 id="将博客部署到Github"><a href="#将博客部署到Github" class="headerlink" title="将博客部署到Github"></a>将博客部署到Github</h2><h3 id="创建个人Github仓库"><a href="#创建个人Github仓库" class="headerlink" title="创建个人Github仓库"></a>创建个人Github仓库</h3><ol>
-<li>注册一个Github账号，并登录</li>
-<li>新建一个Github仓库，并命名为yourname.github.io。必须按此格式命名，这里yourname可以自定义，比如我的仓库名Linsip.github.io</li>
-</ol>
-<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><ol>
-<li><p>Git Bash输入下面的命令，生成密钥</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;你的github账户名字&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;你的github邮箱&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>检测输入的用户名与邮箱是否正确</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config user.name<br>git config user.email<br></code></pre></td></tr></table></figure></li>
-<li><p>输入下面命令创建SSH密钥</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;youremail&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li><p>上传SSH密钥到Github</p>
-</li>
-</ol>
-<h3 id="部署代码到Github上"><a href="#部署代码到Github上" class="headerlink" title="部署代码到Github上"></a>部署代码到Github上</h3><ol>
-<li><p>找到并打开配置文件，修改其内容</p>
-</li>
-<li><p>Git Bash输入下面命令，安装hexo-deployer-git</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save//<br></code></pre></td></tr></table></figure></li>
-<li><p>继续执行下面的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean//<br>hexo generate//<br>hexo deploy//<br></code></pre></td></tr></table></figure></li>
-<li><p>打开网址<a target="_blank" rel="noopener" href="http://yourname.github.io/">http://yourname.github.io</a>就可以看到你自己搭建的博客。这里的yourname就是你Github仓库的名字</p>
-</li>
-</ol>
-<h2 id="设置个人域名"><a href="#设置个人域名" class="headerlink" title="设置个人域名"></a>设置个人域名</h2><h3 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h3><p>推荐<a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a></p>
-<h2 id="Hexo博客常用命令"><a href="#Hexo博客常用命令" class="headerlink" title="Hexo博客常用命令"></a>Hexo博客常用命令</h2><h3 id="新建博客目录"><a href="#新建博客目录" class="headerlink" title="新建博客目录"></a>新建博客目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init &lt;folder&gt;<br></code></pre></td></tr></table></figure>
-
-<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new [layout] &lt;title&gt;<br>//例如<br>hexo n <span class="hljs-string">&quot;我的第一篇博客&quot;</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br></code></pre></td></tr></table></figure>
-
-<h3 id="部署内容到网站"><a href="#部署内容到网站" class="headerlink" title="部署内容到网站"></a>部署内容到网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure>
-
-<h3 id="启用本地预览"><a href="#启用本地预览" class="headerlink" title="启用本地预览"></a>启用本地预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="Hexo博客常见问题"><a href="#Hexo博客常见问题" class="headerlink" title="Hexo博客常见问题"></a>Hexo博客常见问题</h2><h3 id="更换博客主题"><a href="#更换博客主题" class="headerlink" title="更换博客主题"></a>更换博客主题</h3><ol>
-<li><p>到<a target="_blank" rel="noopener" href="https://hexo.io/themes">Hexo官网</a>找到自己喜欢的主题，</p>
-</li>
-<li><p>然后再博客目录下面的themes文件夹下打开git bash，输入以下命令，完成后themes文件夹下会多出一个文件夹，这个文件夹名字就是主题的名字</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> 主题的网址<br></code></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>修改<strong>博客配置文件</strong>即博客目录下_config.yml文件，找到themes，修改后面的主题的名字</li>
-</ol>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">themes:</span> 主题名字<br></code></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>修改<strong>主题配置</strong>文件（不是博客配置文件，一般在主题文件夹themes里面主题文件夹下的_config.yml文件），然后回到博客目录下，打开git bash，查看效果</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>部署到远端，博客目录下，打开git bash</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g<br>hexo d<br></code></pre></td></tr></table></figure>
+              <p><strong>题目内容：</strong></p>
+<p>设计一个表示分数的类Fraction。这个类用两个int类型的变量分别表示分子和分母。</p>
+<p>这个类的构造函数是：</p>
+<p>Fraction(int a, int b)</p>
+<p>  构造一个a/b的分数。</p>
+<p>这个类要提供以下的功能：</p>
+<p>double toDouble();</p>
+<p>  将分数转换为double</p>
+<p>Fraction plus(Fraction r);</p>
+<p>  将自己的分数和r的分数相加，产生一个新的Fraction的对象。注意小学四年级学过两个分数如何相加的哈。</p>
+<p>Fraction multiply(Fraction r);</p>
+<p>  将自己的分数和r的分数相乘，产生一个新的Fraction的对象。</p>
+<p>void print();</p>
+<p>  将自己以“分子/分母”的形式输出到标准输出，并带有回车换行。如果分数是1/1，应该输出1。当分子大于分母时，不需要提出整数部分，即31/30是一个正确的输出。</p>
+<p>注意，在创建和做完运算后应该化简分数为最简形式。如2/4应该被化简为1/2。</p>
+<p>你写的类要和以下的代码放在一起，并请勿修改这个代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br><br><br><br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>		Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);<br><br>		Fraction a = <span class="hljs-keyword">new</span> Fraction(in.nextInt(), in.nextInt());<br><br>		Fraction b = <span class="hljs-keyword">new</span> Fraction(in.nextInt(),in.nextInt());<br><br>		a.print();<br><br>		b.print();<br><br>		a.plus(b).print();<br><br>		a.multiply(b).plus(<span class="hljs-keyword">new</span> Fraction(<span class="hljs-number">5</span>,<span class="hljs-number">6</span>)).print();<br><br>		a.print();<br><br>		b.print();<br><br>		in.close();<br><br>	&#125;<br><br><br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
 
+
+<p>注意，你的类的定义应该这样开始：</p>
+<p>class Fraction {</p>
+<p>也就是说，在你的类的class前面不要有public。</p>
+<p><strong>输入格式:</strong></p>
+<p>程序运行时会得到四个数字，分别构成两个分数，依次是分子和分母。</p>
+<p><strong>输出格式：</strong></p>
+<p>输出一些算式。这些输入和输出都是由Main类的代码完成的，你的代码不要做输入和输出。</p>
+<p><strong>输入样例：</strong></p>
+<p>2 4 1 3</p>
+<p><strong>输出样例：</strong></p>
+<p>1/2</p>
+<p>1/3</p>
+<p>5/6</p>
+<p>1</p>
+<p>1/2</p>
+<p>1/3</p>
+<p>时间限制：500ms内存限制：32000kb</p>
+<p><strong>解答：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br><br>    <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fraction</span> </span>&#123;<br>        <br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;<span class="hljs-comment">//分子</span><br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;<span class="hljs-comment">//分母</span><br><br>        <span class="hljs-comment">//构造方法</span><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Fraction</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123;<br>           <span class="hljs-comment">/*</span><br><span class="hljs-comment">                化简分数</span><br><span class="hljs-comment">                找出a，b的最大公因数i</span><br><span class="hljs-comment">                分子x就是a/i</span><br><span class="hljs-comment">                分母y就是b/i</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">                 */</span><br>            <span class="hljs-keyword">int</span> i = Math.min(a, b);<br>            <span class="hljs-keyword">while</span> (a % i != <span class="hljs-number">0</span> || b % i != <span class="hljs-number">0</span>) &#123;<br>                i--;<br>            &#125;<br>            <span class="hljs-keyword">this</span>.x = a / i;<br>            <span class="hljs-keyword">this</span>.y = b / i;<br><br>        &#125;<br><br>        <span class="hljs-comment">//把分数化为浮点数</span><br>        <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">toDouble</span><span class="hljs-params">()</span> </span>&#123;<br><br>            <span class="hljs-keyword">double</span> d;<br>            d = (<span class="hljs-keyword">double</span>) x / y;<br>            <span class="hljs-keyword">return</span> d;<br><br>        &#125;<br><br>        <span class="hljs-comment">//分数加法</span><br>        <span class="hljs-function">Fraction <span class="hljs-title">plus</span><span class="hljs-params">(Fraction r)</span> </span>&#123;<br><br>            Fraction f1 = <span class="hljs-keyword">new</span> Fraction(<span class="hljs-keyword">this</span>.x * r.y + r.x * <span class="hljs-keyword">this</span>.y, <span class="hljs-keyword">this</span>.y * r.y);<br>            <span class="hljs-keyword">return</span> f1;<br><br>        &#125;<br><br>        <span class="hljs-comment">//分数乘法</span><br>        <span class="hljs-function">Fraction <span class="hljs-title">multiply</span><span class="hljs-params">(Fraction r)</span> </span>&#123;<br><br>            Fraction f1 = <span class="hljs-keyword">new</span> Fraction(<span class="hljs-keyword">this</span>.x * r.x, <span class="hljs-keyword">this</span>.y * r.y);<br>            <span class="hljs-keyword">return</span> f1;<br><br>        &#125;<br><br>        <span class="hljs-comment">//打印分数</span><br>        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>&#123;<br><br>            <span class="hljs-keyword">if</span> (x != y) &#123;<br>                String printFraction;<br>                printFraction = <span class="hljs-keyword">this</span>.x + <span class="hljs-string">&quot;/&quot;</span> + <span class="hljs-keyword">this</span>.y;<br>                System.out.println(printFraction);<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                System.out.println(<span class="hljs-string">&quot;1&quot;</span>);<br>            &#125;<br><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);<br><br>        Fraction a = <span class="hljs-keyword">new</span> Fraction(in.nextInt(), in.nextInt());<br><br>        Fraction b = <span class="hljs-keyword">new</span> Fraction(in.nextInt(), in.nextInt());<br><br>        a.print();<br><br>        b.print();<br><br>        a.plus(b).print();<br><br>        a.multiply(b).plus(<span class="hljs-keyword">new</span> Fraction(<span class="hljs-number">5</span>, <span class="hljs-number">6</span>)).print();<br><br>        a.print();<br><br>        b.print();<br><br>        in.close();<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 
             </div>
@@ -367,7 +305,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+                      <a class="hover-with-bg" href="/categories/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/">编程练习题</a>
                     
                   </div>
                 
@@ -375,7 +313,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
                     
                   </div>
                 
@@ -392,15 +330,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/04/29/Markdown%E8%AF%AD%E6%B3%95/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Markdown语法</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/06/01/JavaScript%E7%AC%94%E8%AE%B0/">
+                        <span class="hidden-mobile">JavaScript笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
