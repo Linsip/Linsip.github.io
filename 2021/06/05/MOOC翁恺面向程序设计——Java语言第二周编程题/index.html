@@ -18,7 +18,7 @@
   <meta name="author" content="Linsip">
   <meta name="keywords" content="">
   
-  <title>MOOC翁恺面向程序设计——Java语言第一周编程题 - Linsip</title>
+  <title>MOOC翁恺面向程序设计——Java语言第二周编程题 - Linsip</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -175,7 +175,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="MOOC翁恺面向程序设计——Java语言第一周编程题">
+            <span class="h2" id="subtitle" title="MOOC翁恺面向程序设计——Java语言第二周编程题">
               
             </span>
 
@@ -185,8 +185,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-06-03 20:30" pubdate>
-        2021年6月3日 晚上
+      <time datetime="2021-06-05 13:32" pubdate>
+        2021年6月5日 下午
       </time>
     </span>
   
@@ -197,7 +197,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      725 字
+      614 字
     </span>
   
 
@@ -207,7 +207,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      13
+      10
        分钟
     </span>
   
@@ -245,7 +245,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">MOOC翁恺面向程序设计——Java语言第一周编程题</h1>
+            <h1 style="display: none">MOOC翁恺面向程序设计——Java语言第二周编程题</h1>
             
               <p class="note note-info">
                 
@@ -254,48 +254,35 @@
               </p>
             
             <div class="markdown-body">
-              <p>分数（10分）</p>
+              <p>有秒计时的数字时钟（10分）</p>
 <p><strong>题目内容：</strong></p>
-<p>设计一个表示分数的类Fraction。这个类用两个int类型的变量分别表示分子和分母。</p>
-<p>这个类的构造函数是：</p>
-<p>Fraction(int a, int b)</p>
-<p>  构造一个a/b的分数。</p>
-<p>这个类要提供以下的功能：</p>
-<p>double toDouble();</p>
-<p>  将分数转换为double</p>
-<p>Fraction plus(Fraction r);</p>
-<p>  将自己的分数和r的分数相加，产生一个新的Fraction的对象。注意小学四年级学过两个分数如何相加的哈。</p>
-<p>Fraction multiply(Fraction r);</p>
-<p>  将自己的分数和r的分数相乘，产生一个新的Fraction的对象。</p>
-<p>void print();</p>
-<p>  将自己以“分子/分母”的形式输出到标准输出，并带有回车换行。如果分数是1/1，应该输出1。当分子大于分母时，不需要提出整数部分，即31/30是一个正确的输出。</p>
-<p>注意，在创建和做完运算后应该化简分数为最简形式。如2/4应该被化简为1/2。</p>
-<p>你写的类要和以下的代码放在一起，并请勿修改这个代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br><br><br><br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>		Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);<br><br>		Fraction a = <span class="hljs-keyword">new</span> Fraction(in.nextInt(), in.nextInt());<br><br>		Fraction b = <span class="hljs-keyword">new</span> Fraction(in.nextInt(),in.nextInt());<br><br>		a.print();<br><br>		b.print();<br><br>		a.plus(b).print();<br><br>		a.multiply(b).plus(<span class="hljs-keyword">new</span> Fraction(<span class="hljs-number">5</span>,<span class="hljs-number">6</span>)).print();<br><br>		a.print();<br><br>		b.print();<br><br>		in.close();<br><br>	&#125;<br><br><br><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>这一周的编程题是需要你在课程所给的时钟程序的基础上修改而成。但是我们并不直接给你时钟程序的代码，请根据视频自己输入时钟程序的Display和Clock类的代码，然后来做这个题目。</p>
+<p>我们需要给时钟程序加上一个表示秒的Display，然后为Clock增加以下public的成员函数：</p>
+<p>public Clock(int hour, int minute, int second);</p>
+<p>  用hour, minute和second初始化时间。</p>
+<p>public void tick();</p>
+<p>  “嘀嗒”一下，时间走1秒。</p>
+<p>public String toString();</p>
+<p>  返回一个String的值，以“hh:mm:ss“的形式表示当前时间。这里每个数值都占据两位，不足两位时补0。如“00:01:22”。注意其中的冒号是西文的，不是中文的。</p>
+<p><em>提示：String.format()可以用和printf一样的方式来格式化一个字符串。</em></p>
+<p>另外写一个Main类，它的main函数为下面的样子，注意，必须原封不动地作为Main的main函数：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>    java.util.Scanner in = <span class="hljs-keyword">new</span> java.util.Scanner(System.in);<br>		<br>    Clock clock = <span class="hljs-keyword">new</span> Clock(in.nextInt(), in.nextInt(), in.nextInt());<br><br>	clock.tick();<br><br>    System.out.println(clock);<br><br>    in.close();<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
-
-
-<p>注意，你的类的定义应该这样开始：</p>
-<p>class Fraction {</p>
-<p>也就是说，在你的类的class前面不要有public。</p>
+<p>**<br>**</p>
+<p>**注意！在提交的时候，把Main、Clock和Display三个类的代码合并在一起，其中Main类是public的，而*<em>Clock和*<em>Display类是没有修饰符的。另外，千万注意第一行不能有package语句。</em></em></p>
 <p><strong>输入格式:</strong></p>
-<p>程序运行时会得到四个数字，分别构成两个分数，依次是分子和分母。</p>
+<p>采用给定的main函数无需考虑输入输出。</p>
 <p><strong>输出格式：</strong></p>
-<p>输出一些算式。这些输入和输出都是由Main类的代码完成的，你的代码不要做输入和输出。</p>
+<p>采用给定的main函数无需考虑输入输出。</p>
 <p><strong>输入样例：</strong></p>
-<p>2 4 1 3</p>
+<p>采用给定的main函数无需考虑输入输出。</p>
 <p><strong>输出样例：</strong></p>
-<p>1/2</p>
-<p>1/3</p>
-<p>5/6</p>
-<p>1</p>
-<p>1/2</p>
-<p>1/3</p>
+<p>采用给定的main函数无需考虑输入输出。</p>
 <p>时间限制：500ms内存限制：32000kb</p>
 <p><strong>解答：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br><br>    <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fraction</span> </span>&#123;<br>        <br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;<span class="hljs-comment">//分子</span><br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;<span class="hljs-comment">//分母</span><br><br>        <span class="hljs-comment">//构造方法</span><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Fraction</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123;<br>           <span class="hljs-comment">/*</span><br><span class="hljs-comment">                化简分数</span><br><span class="hljs-comment">                找出a，b的最大公因数i</span><br><span class="hljs-comment">                分子x就是a/i</span><br><span class="hljs-comment">                分母y就是b/i</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">                 */</span><br>            <span class="hljs-keyword">int</span> i = Math.min(a, b);<br>            <span class="hljs-keyword">while</span> (a % i != <span class="hljs-number">0</span> || b % i != <span class="hljs-number">0</span>) &#123;<br>                i--;<br>            &#125;<br>            <span class="hljs-keyword">this</span>.x = a / i;<br>            <span class="hljs-keyword">this</span>.y = b / i;<br><br>        &#125;<br><br>        <span class="hljs-comment">//把分数化为浮点数</span><br>        <span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">toDouble</span><span class="hljs-params">()</span> </span>&#123;<br><br>            <span class="hljs-keyword">double</span> d;<br>            d = (<span class="hljs-keyword">double</span>) x / y;<br>            <span class="hljs-keyword">return</span> d;<br><br>        &#125;<br><br>        <span class="hljs-comment">//分数加法</span><br>        <span class="hljs-function">Fraction <span class="hljs-title">plus</span><span class="hljs-params">(Fraction r)</span> </span>&#123;<br><br>            Fraction f1 = <span class="hljs-keyword">new</span> Fraction(<span class="hljs-keyword">this</span>.x * r.y + r.x * <span class="hljs-keyword">this</span>.y, <span class="hljs-keyword">this</span>.y * r.y);<br>            <span class="hljs-keyword">return</span> f1;<br><br>        &#125;<br><br>        <span class="hljs-comment">//分数乘法</span><br>        <span class="hljs-function">Fraction <span class="hljs-title">multiply</span><span class="hljs-params">(Fraction r)</span> </span>&#123;<br><br>            Fraction f1 = <span class="hljs-keyword">new</span> Fraction(<span class="hljs-keyword">this</span>.x * r.x, <span class="hljs-keyword">this</span>.y * r.y);<br>            <span class="hljs-keyword">return</span> f1;<br><br>        &#125;<br><br>        <span class="hljs-comment">//打印分数</span><br>        <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>&#123;<br><br>            <span class="hljs-keyword">if</span> (x != y) &#123;<br>                String printFraction;<br>                printFraction = <span class="hljs-keyword">this</span>.x + <span class="hljs-string">&quot;/&quot;</span> + <span class="hljs-keyword">this</span>.y;<br>                System.out.println(printFraction);<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                System.out.println(<span class="hljs-string">&quot;1&quot;</span>);<br>            &#125;<br><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>        Scanner in = <span class="hljs-keyword">new</span> Scanner(System.in);<br><br>        Fraction a = <span class="hljs-keyword">new</span> Fraction(in.nextInt(), in.nextInt());<br><br>        Fraction b = <span class="hljs-keyword">new</span> Fraction(in.nextInt(), in.nextInt());<br><br>        a.print();<br><br>        b.print();<br><br>        a.plus(b).print();<br><br>        a.multiply(b).plus(<span class="hljs-keyword">new</span> Fraction(<span class="hljs-number">5</span>, <span class="hljs-number">6</span>)).print();<br><br>        a.print();<br><br>        b.print();<br><br>        in.close();<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>        java.util.Scanner in = <span class="hljs-keyword">new</span> java.util.Scanner(System.in);<br><br>        Clock clock = <span class="hljs-keyword">new</span> Clock(in.nextInt(), in.nextInt(), in.nextInt());<br><br>        clock.tick();<br><br>        System.out.println(clock);<br><br>        in.close();<br><br>    &#125;<br><br><br>&#125;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Clock</span> </span>&#123;<br>    <span class="hljs-keyword">private</span> Display hour = <span class="hljs-keyword">new</span> Display(<span class="hljs-number">24</span>);<br>    <span class="hljs-keyword">private</span> Display min = <span class="hljs-keyword">new</span> Display(<span class="hljs-number">60</span>);<br>    <span class="hljs-keyword">private</span> Display sec = <span class="hljs-keyword">new</span> Display(<span class="hljs-number">60</span>);<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Clock</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour , <span class="hljs-keyword">int</span> min , <span class="hljs-keyword">int</span> sec)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.hour.value = hour;<br>        <span class="hljs-keyword">this</span>.min.value = min;<br>        <span class="hljs-keyword">this</span>.sec.value = sec;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">tick</span><span class="hljs-params">()</span> </span>&#123;<br><br>        sec.increase();<br>        <span class="hljs-keyword">if</span> (sec.getValue() == <span class="hljs-number">0</span>) &#123;<br>            min.increase();<br>            <span class="hljs-keyword">if</span> (min.getValue() == <span class="hljs-number">0</span> ) &#123;<br>                hour.increase();<br>            &#125;<br>        &#125;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">&quot;%02d:%02d:%02d\&quot;,hour.getValue(),min.getValue(),sec.getValue());</span><br><span class="hljs-string">    &#125;</span><br><span class="hljs-string">&#125;</span><br><span class="hljs-string"></span><br><span class="hljs-string">class Display &#123;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    int value;</span><br><span class="hljs-string">    int limit;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    public Display(int limit) &#123;</span><br><span class="hljs-string">        this.limit = limit;</span><br><span class="hljs-string">    &#125;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    public void increase() &#123;</span><br><span class="hljs-string"></span><br><span class="hljs-string">        value++;</span><br><span class="hljs-string">        if (value == limit) &#123;</span><br><span class="hljs-string">            value = 0;</span><br><span class="hljs-string">        &#125;</span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br><span class="hljs-string">    &#125;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    public int getValue() &#123;</span><br><span class="hljs-string"></span><br><span class="hljs-string">        return value;</span><br><span class="hljs-string">    &#125;</span><br><span class="hljs-string"></span><br><span class="hljs-string">&#125;</span><br></code></pre></td></tr></table></figure>
 
 
             </div>
@@ -331,18 +318,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/06/05/MOOC%E7%BF%81%E6%81%BA%E9%9D%A2%E5%90%91%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94Java%E8%AF%AD%E8%A8%80%E7%AC%AC%E4%BA%8C%E5%91%A8%E7%BC%96%E7%A8%8B%E9%A2%98/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">MOOC翁恺面向程序设计——Java语言第二周编程题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/06/01/JavaScript%E7%AC%94%E8%AE%B0/">
-                        <span class="hidden-mobile">JavaScript笔记</span>
+                      <a href="/2021/06/03/MOOC%E7%BF%81%E6%81%BA%E9%9D%A2%E5%90%91%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94Java%E8%AF%AD%E8%A8%80%E7%AC%AC%E4%B8%80%E5%91%A8%E7%BC%96%E7%A8%8B%E9%A2%98/">
+                        <span class="hidden-mobile">MOOC翁恺面向程序设计——Java语言第一周编程题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
